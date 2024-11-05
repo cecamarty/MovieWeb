@@ -1,213 +1,186 @@
-
-.home-container {
-    padding: 20px;
-    background-color: #121212; /* Dark background for the entire app */
-    color: #fff; /* White text color */
-  }
-  
-  .top-bar {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-color: #1c1c1c; /* Dark background for the top bar */
-  }
-  
-  .app-name {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .app-name h1 {
-    font-size: 1.5em;
-    color: #fff;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .search-bar input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .search-bar button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #555;
-    color: #fff;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  .search-bar button:hover {
-    background-color: #777;
-  }
-  
-  .genre-section {
-    margin-bottom: 30px;
-  }
-  
-  .genre-title {
-    font-size: 1.5em;
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  
-  .genre-row, .all-movies-row {
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    scroll-behavior: smooth; /* Smooth scrolling */
-  }
-  
-  .genre-row::-webkit-scrollbar, .all-movies-row::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
-  }
-  
-  .movie-card {
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #1c1c1c; /* Dark background to make the content stand out */
-    color: #fff; /* White text color for better contrast */
-    transition: transform 0.3s ease;
-    margin: 0 10px;
-    width: 120px; /* Decreased width to make the cards smaller */
-    flex: 0 0 auto; /* Ensure the cards don't shrink */
-  }
-  
-  .movie-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-  }
-  
-  .movie-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    /*loading: lazy;  Lazy load images */
-  }
-  
-  .movie-card-content {
-    padding: 10px;
-  }
-  
-  .movie-card-title {
-    font-size: 0.9em; /* Decreased font size */
-    margin: 5px 0;
-  }
-  
-  .movie-card-description {
-    font-size: 0.7em; /* Decreased font size */
-    color: #b3b3b3; /* Slightly lighter text for descriptions */
-  }
-  
-  .all-movies-section {
-    margin-top: 50px;
-  }
-  
-  .all-movies-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .all-movies-grid .movie-card {
-    flex: 1 1 calc(33.33% - 20px); /* 3 cards per row on mobile */
-  }
-  
-  @media (min-width: 768px) {
-    .all-movies-grid .movie-card {
-      flex: 1 1 calc(16.66% - 20px); /* 6 cards per row on iPads */
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .all-movies-grid .movie-card {
-      flex: 1 1 calc(12.5% - 20px); /* 8 cards per row on large screens */
-    }
-  }
-  
-  .show-more {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 100%;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-left: 10px;
-  }
-  
-  .show-more span {
-    font-size: 2em;
-  }
-  
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .back-to-top:hover {
-    background-color: #555; /* Hover effect for back-to-top button */
-  }
-  /* Set the background color of the entire body to dark */
+/* General Body Styling */
 body {
-  background-color: #121212; /* Dark background */
-  color: #ffffff; /* Light text for contrast */
-}
-
-/* Top bar styles */
-.top-bar {
-  background-color: #1c1c1c; /* Darker color for the top bar */
-}
-
-/* Input field inside the search bar */
-.search-bar input {
-  background-color: #333; /* Dark input field */
-  color: #fff;
-}
-
-/* Genre section */
-.genre-section {
-  background-color: #1c1c1c; /* Dark background for genre sections */
-}
-
-/* Movie card styling */
-.movie-card {
-  background-color: #2a2a2a; /* Dark background for movie cards */
+  background-color: #121212;
   color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 0px;
+  margin: 0;
 }
 
-/* Back-to-top button */
-.back-to-top {
-  background-color: #333; /* Dark color for button */
+/* Top Bar Styling */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #1c1c1c;
+}
+
+.app-name {
+  text-align: center;
+}
+
+.app-name h1 {
+  font-size: 1.5em;
   color: #fff;
 }
 
-.back-to-top:hover {
-  background-color: #555; /* Slightly lighter on hover */
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
-  
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-family: inherit;
+}
+
+/* Movie Card Styling */
+.movie-card {
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #2a2a2a;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+  flex: 0 0 auto;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.movie-card-content {
+  padding: 8px;
+}
+
+.movie-card-title {
+  font-size: 0.6em;
+}
+
+.movie-card-description {
+  font-size: 0.6em;
+  color: #b3b3b3;
+}
+
+/* All Movies Section Styling */
+.all-movies-section {
+  margin-top: 50px;
+}
+
+.all-movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.all-movies-grid .movie-card {
+  flex: 1 1 calc(33.33% - 20px);
+}
+
+@media (min-width: 768px) {
+  .all-movies-grid .movie-card {
+    flex: 1 1 calc(16.66% - 20px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .all-movies-grid .movie-card {
+    flex: 1 1 calc(12.5% - 20px);
+  }
+}
+
+/* Show More Button Styling */
+.show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+/* Back-to-Top Button Styling */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:not(.visible) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Bottom Navigation Bar Styling */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1c1c1c;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link span {
+  font-size: 1.5em;
+}
+
+.nav-link p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #777;
+}
