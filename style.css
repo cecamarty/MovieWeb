@@ -1,31 +1,4 @@
 
-/* Similar styles as the React project */
- /*.home-container { padding: 20px; background-color: #121212; color: #fff; }
-.top-bar { display: flex; flex-direction: column; padding: 10px; background-color: #1c1c1c; }
-.app-name { text-align: center; margin-bottom: 10px; }
-.app-name h1 { font-size: 1.5em; color: #fff; }
-.search-bar { display: flex; align-items: center; margin-top: 10px; }
-.search-bar input { width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #333; color: #fff; font-size: 16px; }
-.search-bar button { padding: 10px; border: none; border-radius: 5px; background-color: #555; color: #fff; margin-left: 10px; cursor: pointer; }
-.search-bar button:hover { background-color: #777; }
-.genre-section { margin-bottom: 30px; }
-.genre-title { font-size: 1.5em; color: #fff; margin-bottom: 10px; }
-.genre-row { display: flex; overflow-x: auto; padding-bottom: 10px; scroll-behavior: smooth; }
-.genre-row::-webkit-scrollbar { display: none; }
-.movie-card { border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; background-color: #1c1c1c; color: #fff; transition: transform 0.3s ease; margin: 0 10px; width: 120px; flex: 0 0 auto; }
-.movie-card:hover { transform: scale(1.05); }
-.movie-card img { width: 100%; height: auto; display: block; }
-.movie-card-content { padding: 10px; }
-.movie-card-title { font-size: 0.9em; margin: 5px 0; }
-.movie-card-description { font-size: 0.7em; color: #b3b3b3; }
-.back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: #333; color: #fff; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5em; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; }
-.back-to-top:hover { background-color: #555; }
-.all-movies-section { margin-top: 50px; }
-.all-movies-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-.all-movies-grid .movie-card {flex: 1 1 calc(33.33% - 20px); */ /* Adjust this for the number of columns */ 
-/*MovieCard.css*/  
-
-
 .home-container {
     padding: 20px;
     background-color: #121212; /* Dark background for the entire app */
@@ -200,4 +173,41 @@
   .back-to-top:hover {
     background-color: #555; /* Hover effect for back-to-top button */
   }
+  /* Set the background color of the entire body to dark */
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text for contrast */
+}
+
+/* Top bar styles */
+.top-bar {
+  background-color: #1c1c1c; /* Darker color for the top bar */
+}
+
+/* Input field inside the search bar */
+.search-bar input {
+  background-color: #333; /* Dark input field */
+  color: #fff;
+}
+
+/* Genre section */
+.genre-section {
+  background-color: #1c1c1c; /* Dark background for genre sections */
+}
+
+/* Movie card styling */
+.movie-card {
+  background-color: #2a2a2a; /* Dark background for movie cards */
+  color: #ffffff;
+}
+
+/* Back-to-top button */
+.back-to-top {
+  background-color: #333; /* Dark color for button */
+  color: #fff;
+}
+
+.back-to-top:hover {
+  background-color: #555; /* Slightly lighter on hover */
+}
   
