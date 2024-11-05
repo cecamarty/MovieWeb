@@ -1,0 +1,203 @@
+
+/* Similar styles as the React project */
+ /*.home-container { padding: 20px; background-color: #121212; color: #fff; }
+.top-bar { display: flex; flex-direction: column; padding: 10px; background-color: #1c1c1c; }
+.app-name { text-align: center; margin-bottom: 10px; }
+.app-name h1 { font-size: 1.5em; color: #fff; }
+.search-bar { display: flex; align-items: center; margin-top: 10px; }
+.search-bar input { width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #333; color: #fff; font-size: 16px; }
+.search-bar button { padding: 10px; border: none; border-radius: 5px; background-color: #555; color: #fff; margin-left: 10px; cursor: pointer; }
+.search-bar button:hover { background-color: #777; }
+.genre-section { margin-bottom: 30px; }
+.genre-title { font-size: 1.5em; color: #fff; margin-bottom: 10px; }
+.genre-row { display: flex; overflow-x: auto; padding-bottom: 10px; scroll-behavior: smooth; }
+.genre-row::-webkit-scrollbar { display: none; }
+.movie-card { border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden; background-color: #1c1c1c; color: #fff; transition: transform 0.3s ease; margin: 0 10px; width: 120px; flex: 0 0 auto; }
+.movie-card:hover { transform: scale(1.05); }
+.movie-card img { width: 100%; height: auto; display: block; }
+.movie-card-content { padding: 10px; }
+.movie-card-title { font-size: 0.9em; margin: 5px 0; }
+.movie-card-description { font-size: 0.7em; color: #b3b3b3; }
+.back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: #333; color: #fff; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5em; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; }
+.back-to-top:hover { background-color: #555; }
+.all-movies-section { margin-top: 50px; }
+.all-movies-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.all-movies-grid .movie-card {flex: 1 1 calc(33.33% - 20px); */ /* Adjust this for the number of columns */ 
+/*MovieCard.css*/  
+
+
+.home-container {
+    padding: 20px;
+    background-color: #121212; /* Dark background for the entire app */
+    color: #fff; /* White text color */
+  }
+  
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #1c1c1c; /* Dark background for the top bar */
+  }
+  
+  .app-name {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .app-name h1 {
+    font-size: 1.5em;
+    color: #fff;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background-color: #777;
+  }
+  
+  .genre-section {
+    margin-bottom: 30px;
+  }
+  
+  .genre-title {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .genre-row, .all-movies-row {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  .genre-row::-webkit-scrollbar, .all-movies-row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
+  
+  .movie-card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #1c1c1c; /* Dark background to make the content stand out */
+    color: #fff; /* White text color for better contrast */
+    transition: transform 0.3s ease;
+    margin: 0 10px;
+    width: 120px; /* Decreased width to make the cards smaller */
+    flex: 0 0 auto; /* Ensure the cards don't shrink */
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*loading: lazy;  Lazy load images */
+  }
+  
+  .movie-card-content {
+    padding: 10px;
+  }
+  
+  .movie-card-title {
+    font-size: 0.9em; /* Decreased font size */
+    margin: 5px 0;
+  }
+  
+  .movie-card-description {
+    font-size: 0.7em; /* Decreased font size */
+    color: #b3b3b3; /* Slightly lighter text for descriptions */
+  }
+  
+  .all-movies-section {
+    margin-top: 50px;
+  }
+  
+  .all-movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .all-movies-grid .movie-card {
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards per row on mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .all-movies-grid .movie-card {
+      flex: 1 1 calc(16.66% - 20px); /* 6 cards per row on iPads */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .all-movies-grid .movie-card {
+      flex: 1 1 calc(12.5% - 20px); /* 8 cards per row on large screens */
+    }
+  }
+  
+  .show-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  
+  .show-more span {
+    font-size: 2em;
+  }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #555; /* Hover effect for back-to-top button */
+  }
+  
