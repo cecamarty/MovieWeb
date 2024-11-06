@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // Define list of genres
-  const genresList = ["Action", "Adventure", "Comedy", "Drama", "Romance", "Horror", "Animation", "Fantasy"];
+  const genresList = ["Action", "Adventure", "Comedy", "Drama", "Romance", "Horror", "Animation", "Fantasy", "Love Story", "Kids"];
   let movies = []; // Array to hold movie data from JSON
   let genres = {}; // Object to store movies grouped by genre
 
